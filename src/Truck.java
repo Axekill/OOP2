@@ -1,7 +1,12 @@
-public class Truck {
+public class Truck extends Transport {
+    public Truck(String modelName, int wheelsCount) {
+        super(modelName, wheelsCount);
+    }
 
-    public String modelName;
-    public int wheelsCount;
+    @Override
+    public String toString() {
+        return "Truck:"+super.toString();
+    }
 
     public void updateTyre() {
         System.out.println("Меняем покрышку");
